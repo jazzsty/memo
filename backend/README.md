@@ -1,0 +1,6 @@
+CREATE TABLE `memos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `content` varchar(100) NOT NULL,
+  `update_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+)
