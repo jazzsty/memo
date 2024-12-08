@@ -12,7 +12,7 @@
 <script>
 import { reactive, onMounted } from 'vue';
 import axios from 'axios';
-import axiosInstance from '@/axios-config';
+// import axiosInstance from '@/axios-config';
 
 export default {
   setup() {
@@ -72,7 +72,9 @@ export default {
         // 서버에서 데이터 요청
         // const response = await axios.get("/memo/api/memos");
         //
-        const response = await axiosInstance.get("/memos");
+        // const response = await axiosInstance.get("/memos");
+        const response = await axios.get("https://cors-anywhere.herokuapp.com/http://58.225.62.172:8000/api/memos");
+
         console.log("서버 응답 데이터:", response.data);
 
         // 응답 구조 검증 및 상태 업데이트
