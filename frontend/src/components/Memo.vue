@@ -71,6 +71,7 @@ export default {
         
         // 서버에서 데이터 요청
         // const response = await axios.get("/memo/api/memos");
+        //
         const response = await axiosInstance.get("/memos");
         console.log("서버 응답 데이터:", response.data);
 
