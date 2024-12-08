@@ -12,6 +12,7 @@
 <script>
 import { reactive, onMounted } from 'vue';
 import axios from 'axios';
+import axiosInstance from '@/axios-config';
 
 export default {
   setup() {
@@ -69,7 +70,8 @@ export default {
         console.log("Fetching memos from the server...");
         
         // 서버에서 데이터 요청
-        const response = await axios.get("/api/memos");
+        // const response = await axios.get("/memo/api/memos");
+        const response = await axiosInstance.get("/memos");
         console.log("서버 응답 데이터:", response.data);
 
         // 응답 구조 검증 및 상태 업데이트
